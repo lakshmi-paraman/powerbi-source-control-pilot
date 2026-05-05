@@ -2,6 +2,12 @@ table bobj_asset_inventory
 	lineageTag: b2872184-82eb-4987-8e6f-c8e80e1e412b
 	sourceLineageTag: df7692a2-a9c0-45fa-a48b-aa588f86858d
 
+	measure 'count for test' = COUNT(bobj_asset_inventory[ASSET_NAME])
+		formatString: 0
+		lineageTag: b2a6bb64-e33e-45ac-878a-4b2d436c9b23
+
+		changedProperty = Name
+
 	column PLATFORM
 		dataType: string
 		lineageTag: bbd62613-4259-4d58-bfa7-52fa2f99b4b8
