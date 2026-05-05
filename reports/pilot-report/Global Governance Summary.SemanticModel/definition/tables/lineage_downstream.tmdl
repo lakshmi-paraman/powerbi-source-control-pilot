@@ -1,0 +1,93 @@
+table lineage_downstream
+	lineageTag: 94ed9026-5ddf-473a-a1d4-f1eb610d02d5
+	sourceLineageTag: 8184f141-0e70-4d2e-b51d-9a0fe21f4999
+
+	column workspace_id
+		dataType: string
+		isNullable: false
+		lineageTag: 5720d109-b6ea-4715-8ade-fe6362c4c4af
+		sourceLineageTag: 5e0889c2-9b40-4472-8a19-1f80fcae733d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_id
+
+		annotation SummarizationSetBy = User
+
+	column source_type
+		dataType: string
+		lineageTag: 64a7e4dd-e46f-46ae-94d4-5c5e1d0d4948
+		sourceLineageTag: 9299a105-3745-44a9-8517-76a97e862824
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: source_type
+
+		annotation SummarizationSetBy = User
+
+	column source_id
+		dataType: string
+		lineageTag: 600ae8d6-80c8-4c22-8bc3-1c7a104a60c5
+		sourceLineageTag: 14c5a11c-27ff-4d9f-b12b-b0b3feeb56cd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: source_id
+
+		annotation SummarizationSetBy = User
+
+	column target_type
+		dataType: string
+		lineageTag: c67dec44-50af-44b4-bffb-cc3e9adca914
+		sourceLineageTag: ab50b699-1cb4-4c1a-8c3c-647bfe7e3018
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: target_type
+
+		annotation SummarizationSetBy = User
+
+	column target_id
+		dataType: string
+		lineageTag: 8e2ae6a0-8031-4565-b519-051d9af12896
+		sourceLineageTag: 6aa2abfc-8d77-4806-b019-64c2bd882d07
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: target_id
+
+		annotation SummarizationSetBy = User
+
+	column WorkspaceName = LOOKUPVALUE(workspaces[workspace_name],workspaces[workspace_id],lineage_downstream[workspace_id])
+		lineageTag: 342e6b4c-3fc1-4135-a873-4f4293f0b7b7
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReportName = LOOKUPVALUE(reports[report_name],reports[report_id],lineage_downstream[target_id])
+		lineageTag: 8199b237-abd8-4a0f-bf78-56b22b619ace
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column DashboardName = LOOKUPVALUE(dashboards[dashboard_name],dashboards[dashboard_id],lineage_downstream[target_id])
+		lineageTag: 3d9d46a5-6de0-40d8-a4ee-3a75df165536
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatasetName = LOOKUPVALUE(datasets[dataset_name],datasets[dataset_id],lineage_downstream[source_id])
+		lineageTag: 6e001c24-4500-48db-9988-e4ab624af723
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lineage_downstream = entity
+		mode: directQuery
+		source
+			entityName: lineage_downstream
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

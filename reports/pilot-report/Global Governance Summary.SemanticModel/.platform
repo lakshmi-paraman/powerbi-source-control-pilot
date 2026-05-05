@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Global Governance Summary"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "725bd066-e509-4c73-a638-3d7509942057"
+  }
+}

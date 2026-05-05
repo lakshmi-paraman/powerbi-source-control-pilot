@@ -1,0 +1,6 @@
+createOrReplace
+
+	relationship bbd247d2-e78c-45f3-0cee-0c5291d658aa
+		fromColumn: Reports.'workspaces.concatID'
+		toColumn: Workspaces.'workspaces.id'
+

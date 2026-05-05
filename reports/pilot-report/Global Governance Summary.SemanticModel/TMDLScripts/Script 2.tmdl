@@ -1,0 +1,25 @@
+createOrReplace
+
+	relationship bbd247d2-e78c-45f3-0cee-0c5291d658aa
+		fromColumn: Reports.'workspaces.id'
+		toColumn: Workspaces.'workspaces.id'
+
+	relationship e67aacc7-6994-a0b8-32d9-e85ad0b9bdc3
+		fromColumn: 'Reports Users'.'reports.concatID'
+		toColumn: Reports.'reports.concatID'
+
+	relationship 036377f8-e808-9510-dc7d-c7fa8969ae04
+		fromColumn: Dashboards.'workspaces.id'
+		toColumn: Workspaces.'workspaces.id'
+
+	relationship 61dcbe04-0605-f939-7697-9ff9f96881da
+		fromColumn: Dataflows.'workspaces.id'
+		toColumn: Workspaces.'workspaces.id'
+
+	relationship 48e426aa-ee97-21c4-4e1f-09e76d4697bf
+		fromColumn: Datasets.'workspaces.id'
+		toColumn: Workspaces.'workspaces.id'
+
+	relationship 84c284c5-19a7-c540-2117-cd05904c18c7
+		fromColumn: Users.'workspaces.id'
+		toColumn: Workspaces.'workspaces.id'

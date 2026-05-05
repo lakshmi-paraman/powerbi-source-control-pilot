@@ -1,0 +1,150 @@
+table reports
+	lineageTag: 1ee97248-3446-44a7-b4d7-b003a907e17a
+	sourceLineageTag: 54d4d0a9-512b-4b3c-b25a-6ac0ffbca07e
+
+	measure 'Min Modified Date' = ```
+			
+			MIN (reports[modified_datetime])
+			
+			```
+		lineageTag: ef9665e5-f371-4606-8f18-2477ccccad71
+
+		changedProperty = Name
+
+	measure 'Latest Modified Date' = MAX(reports[modified_datetime])
+		lineageTag: 06efb3ea-bfaf-4ee2-a735-b177e42bc015
+
+		changedProperty = Name
+
+	measure 'Distinct Reports (Last 38 Days Incl Today)' = ```
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( reports[report_id] ),
+			    reports[modified_datetime] >= TODAY() - 37,
+			    reports[modified_datetime] <= TODAY()
+			)
+			
+			```
+		formatString: 0
+		lineageTag: c8fb6752-1eb2-4706-a474-dac39ff2c885
+
+		changedProperty = Name
+
+	column report_id
+		dataType: string
+		lineageTag: c16502d6-f2c3-4649-8951-82c3bb26bc63
+		sourceLineageTag: 4c2b7d53-1042-40dd-880c-ed4b3fdd1466
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: report_id
+
+		annotation SummarizationSetBy = User
+
+	column workspace_id
+		dataType: string
+		isNullable: false
+		lineageTag: a7cfcc51-bc5d-40a2-ae6e-0f827dd1915e
+		sourceLineageTag: c657b9e8-6fa3-49b6-a094-4afb76f2bcb0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_id
+
+		annotation SummarizationSetBy = User
+
+	column dataset_id
+		dataType: string
+		lineageTag: 09145609-6a7b-4280-a417-1c5617dccb87
+		sourceLineageTag: cf851563-659a-4f62-9b77-f69d235f2986
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dataset_id
+
+		annotation SummarizationSetBy = User
+
+	column report_name
+		dataType: string
+		lineageTag: e7b07a25-ccc5-4549-b11c-de1a0828cc02
+		sourceLineageTag: 668c1f6a-4247-4e2d-aedd-216616204af2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: report_name
+
+		annotation SummarizationSetBy = User
+
+	column report_type
+		dataType: string
+		lineageTag: 8e48d121-bf63-4711-8ed5-87173b247dfe
+		sourceLineageTag: a7beadcb-859e-4663-9ddf-fea6ce6c2e04
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: report_type
+
+		annotation SummarizationSetBy = User
+
+	column created_datetime
+		dataType: string
+		lineageTag: 4b573187-830d-447e-8f56-f4448a175d2c
+		sourceLineageTag: c167cf03-bdb1-4973-8304-ecd1b4247d29
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: created_datetime
+
+		annotation SummarizationSetBy = User
+
+	column modified_datetime
+		dataType: string
+		lineageTag: e9312faa-7eaf-4a4c-ad9b-72dc72ffb268
+		sourceLineageTag: 97989bec-1bd3-4461-b225-3cc8f0ffaf23
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modified_datetime
+
+		annotation SummarizationSetBy = User
+
+	column modified_by
+		dataType: string
+		lineageTag: e96ce175-033b-4e59-a4e0-f6824b70f187
+		sourceLineageTag: 9cb4bda5-0da4-47fe-b481-799b5e580a50
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: modified_by
+
+		annotation SummarizationSetBy = User
+
+	column endorsement
+		dataType: string
+		lineageTag: 33c9afcf-00c2-4e8b-acdd-bf0006dd047a
+		sourceLineageTag: 2b96efeb-bec5-4cd0-9f6c-e643640cbf05
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: endorsement
+
+		annotation SummarizationSetBy = User
+
+	column last_accessed_utc
+		dataType: string
+		lineageTag: 788f65a2-1f83-4af5-9e92-bb9e32e0c82c
+		sourceLineageTag: 36b73753-d34d-451d-9422-ea0e5138de10
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_accessed_utc
+
+		annotation SummarizationSetBy = User
+
+	column certified_by
+		dataType: int64
+		formatString: 0
+		lineageTag: 35220a8e-6c81-4ee8-b0e2-a65360e60ed3
+		sourceLineageTag: c1959676-1b5a-4761-81be-a9a621f52cce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: certified_by
+
+		annotation SummarizationSetBy = User
+
+	partition reports = entity
+		mode: directQuery
+		source
+			entityName: reports
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

@@ -1,0 +1,172 @@
+table tableau_metadata
+	lineageTag: 3473bd37-7b55-4764-b259-738a8353ad8a
+	sourceLineageTag: 83b432ac-8f5a-41e6-8ab2-0a6964e3c09f
+
+	column PLATFORM
+		dataType: string
+		lineageTag: 601b9d89-babb-48eb-a01c-f1a60894bf04
+		sourceLineageTag: cce663cb-4bb5-482d-9b53-4a7fc717591a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: PLATFORM
+
+		annotation SummarizationSetBy = User
+
+	column Site
+		dataType: string
+		lineageTag: 2af3f097-500c-437a-b145-ad1e59e59154
+		sourceLineageTag: 0d8d4f29-e44a-48b3-a9f2-997e181d93a5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Site
+
+		annotation SummarizationSetBy = User
+
+	column ASSET_TYPE
+		dataType: string
+		lineageTag: ff8a026b-844d-49a4-be40-e3a80f7205c6
+		sourceLineageTag: 1b0506b5-b29a-441d-afff-c05912a3b423
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ASSET_TYPE
+
+		annotation SummarizationSetBy = User
+
+	column DOCUMENT_CUID
+		dataType: string
+		lineageTag: 71669d78-f47f-4797-a451-a72486a4ff75
+		sourceLineageTag: fcb09f07-c883-4e8c-aba1-4faa5ee4fcd7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: DOCUMENT_CUID
+
+		annotation SummarizationSetBy = User
+
+	column SYSTEM_ASSET_ID
+		dataType: string
+		lineageTag: 23527e06-f878-40ec-b45c-97422b53df52
+		sourceLineageTag: e9574c00-243b-4e9b-a5d7-2f6b104aa7ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: SYSTEM_ASSET_ID
+
+		annotation SummarizationSetBy = User
+
+	column ASSET_NAME
+		dataType: string
+		lineageTag: 2a81def4-a457-4511-94b6-404e3e3c272c
+		sourceLineageTag: 6bb8f01a-9bcf-43ad-8f4d-7116c0bf72e4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ASSET_NAME
+
+		annotation SummarizationSetBy = User
+
+	column LOCATION_PATH
+		dataType: string
+		lineageTag: d867856f-8608-42cf-aad9-0960bc7396e2
+		sourceLineageTag: 864b6a59-49ec-4ac5-8b0b-7f82d5afd02a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LOCATION_PATH
+
+		annotation SummarizationSetBy = User
+
+	column OWNER_NAME
+		dataType: string
+		lineageTag: ee928758-3267-4a25-be77-1e0b6e65b0f4
+		sourceLineageTag: 4bb72de2-48c1-466b-b8aa-c9b108bf5d8f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OWNER_NAME
+
+		annotation SummarizationSetBy = User
+
+	column OWNER_EMAIL
+		dataType: string
+		lineageTag: cd83fe4e-979b-43d3-ac7e-f500a2896fe0
+		sourceLineageTag: 06676506-4440-49a5-b93c-c6273df406d5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OWNER_EMAIL
+
+		annotation SummarizationSetBy = User
+
+	column CREATION_DATE
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b67ce45c-0c85-43db-90cc-144d8cf05a12
+		sourceLineageTag: c6db60da-00e1-4bc0-8eca-1f6cde14c776
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CREATION_DATE
+
+		annotation SummarizationSetBy = User
+
+	column LAST_UPDATED_DATE
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: b7938427-ccbe-4942-891c-9613b2892af4
+		sourceLineageTag: 03e5f9f3-3e72-4500-b781-10cfdef3d8f6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: LAST_UPDATED_DATE
+
+		annotation SummarizationSetBy = User
+
+	column Usage_Hits
+		dataType: double
+		lineageTag: 86e2d7c5-9d30-4be4-aab0-e5080bc0a6fb
+		sourceLineageTag: eac6cb7e-c3dc-40ad-b8e4-227dcd400736
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Usage_Hits
+
+		annotation SummarizationSetBy = User
+
+	column Dashboard_Count
+		dataType: double
+		lineageTag: 20db4c06-00b5-4bf1-8023-31679d06f1a6
+		sourceLineageTag: f13eab2a-e69d-4e1e-9bb0-f1167a53b440
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Dashboard_Count
+
+		annotation SummarizationSetBy = User
+
+	column Sheet_Count
+		dataType: double
+		lineageTag: e325b959-8ac7-400c-aea6-89f93f7a5b72
+		sourceLineageTag: 75e47391-df51-407a-bab3-678709ba1e0a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Sheet_Count
+
+		annotation SummarizationSetBy = User
+
+	column Embedded_DS_Count
+		dataType: double
+		lineageTag: bf185823-d350-48e6-8eaf-ec142026514d
+		sourceLineageTag: 091e13d9-5214-4d55-9b5d-0c4ef10ab3c9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Embedded_DS_Count
+
+		annotation SummarizationSetBy = User
+
+	column SOURCE_TABLE_COUNT
+		dataType: double
+		lineageTag: 1e684cd2-cb54-472a-9736-0afd41bea99a
+		sourceLineageTag: 4dfe1153-fe77-489e-837c-000399b8a983
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: SOURCE_TABLE_COUNT
+
+		annotation SummarizationSetBy = User
+
+	partition tableau_metadata = entity
+		mode: directQuery
+		source
+			entityName: tableau_metadata
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

@@ -1,0 +1,323 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "be27d28a6d247e5c8a74",
+  "position": {
+    "x": 773.181578175418,
+    "y": 181.12995013200353,
+    "z": 31000,
+    "height": 528.52097389263713,
+    "width": 506.89351716045763,
+    "tabOrder": 24000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineage_downstream"
+                    }
+                  },
+                  "Property": "WorkspaceName"
+                }
+              },
+              "queryRef": "lineage_downstream.WorkspaceName",
+              "nativeQueryRef": "WorkspaceName"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "lineage_downstream"
+                        }
+                      },
+                      "Property": "DatasetName"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "lineage_downstream.DatasetName",
+              "nativeQueryRef": "Dataset Count",
+              "displayName": "Dataset Count"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "lineage_downstream"
+                        }
+                      },
+                      "Property": "ReportName"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "CountNonNull(lineage_downstream.ReportName)",
+              "nativeQueryRef": "Report Count",
+              "displayName": "Report Count"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "lineage_downstream"
+                        }
+                      },
+                      "Property": "DashboardName"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "lineage_downstream.DashboardName",
+              "nativeQueryRef": "Dashboard Count",
+              "displayName": "Dashboard Count"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "lineage_downstream"
+                      }
+                    },
+                    "Property": "ReportName"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "274.6666712332801D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.workspace_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "111.99999766572465D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.dashboard_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.9999976880622D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.dataset_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83.33333333333333D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.report_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "112.57017996102915D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.column_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145.6757097511187D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.measure_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.33333333333333D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.type"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58.66665293647813D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.state"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "172.57665715698076D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "lineage_downstream.WorkspaceName"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8E8A6'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sources by Dataset'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

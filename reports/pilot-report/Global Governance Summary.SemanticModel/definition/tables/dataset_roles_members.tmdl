@@ -1,0 +1,61 @@
+table dataset_roles_members
+	lineageTag: 16f4f679-06e8-492f-9664-73ae76d0f24b
+	sourceLineageTag: 92557a32-378c-4217-b1f6-6e52e48cb993
+
+	column workspace_id
+		dataType: string
+		isNullable: false
+		lineageTag: 89941da5-4280-4e2d-bd32-ad34c964cfea
+		sourceLineageTag: a4c61c8a-1091-4312-9d66-66ab99a88660
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_id
+
+		annotation SummarizationSetBy = User
+
+	column dataset_id
+		dataType: string
+		lineageTag: 6f34dae0-7ce6-4e5c-80fe-f9c23a0cbf59
+		sourceLineageTag: de1e274a-be7e-48be-891f-326528c83fab
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dataset_id
+
+		annotation SummarizationSetBy = User
+
+	column role_name
+		dataType: string
+		lineageTag: b57f611e-6ce2-424c-bef0-285249300fe4
+		sourceLineageTag: e3edd33c-42e3-4dd6-be6a-19aa2d2239ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: role_name
+
+		annotation SummarizationSetBy = User
+
+	column member
+		dataType: string
+		lineageTag: 2a96632d-586d-461c-8e27-7359b1e307aa
+		sourceLineageTag: 6e2bc62a-5fba-403d-b9f6-edc7616536ff
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: member
+
+		annotation SummarizationSetBy = User
+
+	column permission
+		dataType: string
+		lineageTag: 4d414f43-4ee8-404e-9787-c80b3cd74991
+		sourceLineageTag: 5fea5119-eb3c-43ce-b415-6589f1054a58
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: permission
+
+		annotation SummarizationSetBy = User
+
+	partition dataset_roles_members = entity
+		mode: directQuery
+		source
+			entityName: dataset_roles_members
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

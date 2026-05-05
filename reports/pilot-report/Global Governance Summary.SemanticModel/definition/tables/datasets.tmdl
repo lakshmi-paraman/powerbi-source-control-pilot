@@ -1,0 +1,92 @@
+table datasets
+	lineageTag: 9d096962-e532-4fab-ab4f-21ee154145a7
+	sourceLineageTag: cfe21dae-d087-449b-8158-bd44d2232362
+
+	column dataset_id
+		dataType: string
+		lineageTag: 47defd38-f482-45e8-8685-5f8343dbb93a
+		sourceLineageTag: 09ae1b57-3551-4a84-9f79-bc11cbc5d397
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dataset_id
+
+		annotation SummarizationSetBy = User
+
+	column workspace_id
+		dataType: string
+		isNullable: false
+		lineageTag: bdc5e8b4-57d7-4004-88fa-03c8687d7fe5
+		sourceLineageTag: 13917e92-2dae-41ad-9f40-a139301c89ce
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_id
+
+		annotation SummarizationSetBy = User
+
+	column dataset_name
+		dataType: string
+		lineageTag: db4bed02-5e4a-4cf7-9668-f4e0375fb85d
+		sourceLineageTag: ffcc474c-97c8-4d05-8c83-58712394779a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dataset_name
+
+		annotation SummarizationSetBy = User
+
+	column configured_by
+		dataType: string
+		lineageTag: 6cf2d3c5-2175-4034-a880-18e446687557
+		sourceLineageTag: ae0368b0-d455-4d23-b528-aca69d09638b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: configured_by
+
+		annotation SummarizationSetBy = User
+
+	column target_storage_mode
+		dataType: string
+		lineageTag: 2b8fd7ec-4b98-406e-a994-3e8d51112e83
+		sourceLineageTag: bae87d58-2bea-4480-bdc0-19aa9b6c4401
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: target_storage_mode
+
+		annotation SummarizationSetBy = User
+
+	column endorsement
+		dataType: string
+		lineageTag: 3102f20e-42ac-44db-a97e-07c9a40fe122
+		sourceLineageTag: f7e806d6-898a-4686-8381-84234a688015
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: endorsement
+
+		annotation SummarizationSetBy = User
+
+	column last_accessed_utc
+		dataType: string
+		lineageTag: 7bf3d4c9-0b92-4f27-9944-108908a21613
+		sourceLineageTag: 2cee56be-b5e6-4a76-b584-87f6403f0b10
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_accessed_utc
+
+		annotation SummarizationSetBy = User
+
+	column certified_by
+		dataType: int64
+		formatString: 0
+		lineageTag: 413004cf-c62c-4099-9881-cffecb971d6f
+		sourceLineageTag: 5b8d198c-0ff3-4716-9a41-d0a69ffd1172
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: certified_by
+
+		annotation SummarizationSetBy = User
+
+	partition datasets = entity
+		mode: directQuery
+		source
+			entityName: datasets
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

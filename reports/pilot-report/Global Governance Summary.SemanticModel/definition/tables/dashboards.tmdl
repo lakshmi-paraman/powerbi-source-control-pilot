@@ -1,0 +1,62 @@
+table dashboards
+	lineageTag: 3ed3cd4b-b063-47df-9dc9-59c9164ea16a
+	sourceLineageTag: 0fa8159c-f963-4da2-9b98-dec110459671
+
+	column dashboard_id
+		dataType: string
+		lineageTag: 7bf8c86b-29fa-4d46-8cd7-60aa81f7d6a6
+		sourceLineageTag: abd706a7-9cd3-440b-a7d5-fbda17c15c23
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dashboard_id
+
+		annotation SummarizationSetBy = User
+
+	column workspace_id
+		dataType: string
+		isNullable: false
+		lineageTag: 9fcb8f2f-c756-4681-8396-e92983b05102
+		sourceLineageTag: f2812fdd-ef48-48db-9c16-69205a442f32
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_id
+
+		annotation SummarizationSetBy = User
+
+	column dashboard_name
+		dataType: string
+		lineageTag: e6c1e9ce-aaec-4089-b5c4-e8e1617127bf
+		sourceLineageTag: cad49917-d761-4f04-9c54-e299eede85fe
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dashboard_name
+
+		annotation SummarizationSetBy = User
+
+	column is_read_only
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5dea73bb-1687-421d-bdb6-0c7431102c6c
+		sourceLineageTag: 98fc13cf-888a-40ec-9e9c-e36c3b4801cd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: is_read_only
+
+		annotation SummarizationSetBy = User
+
+	column last_accessed_utc
+		dataType: string
+		lineageTag: dcf294df-8af0-4d0a-98de-5f0d8ae9dae9
+		sourceLineageTag: a71d22ab-489d-4198-b4fa-f39db98df4c7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_accessed_utc
+
+		annotation SummarizationSetBy = User
+
+	partition dashboards = entity
+		mode: directQuery
+		source
+			entityName: dashboards
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

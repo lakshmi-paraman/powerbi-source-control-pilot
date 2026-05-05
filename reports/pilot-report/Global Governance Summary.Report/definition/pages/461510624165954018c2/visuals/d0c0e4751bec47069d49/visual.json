@@ -1,0 +1,367 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "d0c0e4751bec47069d49",
+  "position": {
+    "x": 5,
+    "y": 280,
+    "z": 34000,
+    "height": 430,
+    "width": 840,
+    "tabOrder": 23000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "workspace_name"
+                }
+              },
+              "queryRef": "workspaces.workspace_name",
+              "nativeQueryRef": "Workspace Name",
+              "active": true,
+              "displayName": "Workspace Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "type"
+                }
+              },
+              "queryRef": "workspaces.type",
+              "nativeQueryRef": "Type",
+              "active": true,
+              "displayName": "Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "state"
+                }
+              },
+              "queryRef": "workspaces.state",
+              "nativeQueryRef": "State",
+              "active": true,
+              "displayName": "State"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "is_on_dedicated_capacity"
+                }
+              },
+              "queryRef": "workspaces.is_on_dedicated_capacity",
+              "nativeQueryRef": "Is On Dedicated Capacity",
+              "active": true,
+              "displayName": "Is On Dedicated Capacity"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "Last Accessed Date"
+                }
+              },
+              "queryRef": "workspaces.Last Accessed Date",
+              "nativeQueryRef": "Last Accessed",
+              "active": true,
+              "displayName": "Last Accessed"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "dataset_total_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(workspaces.dataset_total_count)",
+              "nativeQueryRef": "Datasets",
+              "displayName": "Datasets"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "column_total_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(workspaces.column_total_count)",
+              "nativeQueryRef": "Columns",
+              "displayName": "Columns"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "measure_total_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(workspaces.measure_total_count)",
+              "nativeQueryRef": "Measures",
+              "displayName": "Measures"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "workspaces"
+                  }
+                },
+                "Property": "workspace_name"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "workspaces.workspace_name"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "workspaces.type"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "workspaces.state"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "workspaces.is_on_dedicated_capacity"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "workspaces.Last Accessed Date"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tabular'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "showExpandCollapseButtons": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "208.99431983359744D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.workspace_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70.85713092000118D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.state"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.33379734080886D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.dataset_total_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.6650292495888D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.column_total_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.64423422355065D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.is_on_dedicated_capacity"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89.68112683498362D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.Last Accessed Date"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.40999610811804D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.measure_total_count)"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

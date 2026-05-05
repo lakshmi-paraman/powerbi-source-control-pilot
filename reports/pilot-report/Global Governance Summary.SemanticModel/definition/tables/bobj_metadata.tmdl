@@ -1,0 +1,227 @@
+table bobj_metadata
+	lineageTag: ae1c89a7-6d8e-435c-a363-873ee662ecdb
+	sourceLineageTag: 2d108515-b743-4507-84e8-54c15ef27651
+
+	column platform
+		dataType: string
+		lineageTag: 3bd19db6-588b-4bea-980d-913da2f958ec
+		sourceLineageTag: f28aedcc-c6a3-4021-a2e1-d33f8c164ee1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = User
+
+	column cmsid
+		dataType: string
+		lineageTag: 71f52023-84f3-4de7-82df-803fd8dc51c9
+		sourceLineageTag: c42b92f4-4f7f-4e11-9bdd-65753645bb21
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: cmsid
+
+		annotation SummarizationSetBy = User
+
+	column document_cuid
+		dataType: string
+		lineageTag: 54583bbb-3d40-4a56-9f28-94e243f23f46
+		sourceLineageTag: 786d0caf-fb6b-4b0a-b524-43ff857344d2
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: document_cuid
+
+		annotation SummarizationSetBy = User
+
+	column system_asset_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e7681b96-32ba-437a-9526-449aa2e53e13
+		sourceLineageTag: 0a68efd7-9dce-42a4-91e6-bcce5f4704f3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: system_asset_id
+
+		annotation SummarizationSetBy = User
+
+	column asset_name
+		dataType: string
+		lineageTag: 51d662f0-a871-4fd1-8502-a0c504eacfa0
+		sourceLineageTag: 79321a6f-66ec-4f6b-b593-1c80683cc541
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: asset_name
+
+		annotation SummarizationSetBy = User
+
+	column asset_type
+		dataType: string
+		lineageTag: deb01435-bbd8-4480-823e-4f12f86d7c5c
+		sourceLineageTag: 9889d2a3-baa2-4f82-9126-6bb64de688a0
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: asset_type
+
+		annotation SummarizationSetBy = User
+
+	column location_path
+		dataType: string
+		lineageTag: 49df79e9-a494-4d69-bebe-51fdac76028f
+		sourceLineageTag: 1883cbca-3efb-4252-99a6-019d4a1598ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: location_path
+
+		annotation SummarizationSetBy = User
+
+	column owner_name
+		dataType: string
+		lineageTag: 07621849-c70f-45af-9e6d-bb6c77868135
+		sourceLineageTag: 7682eb61-5512-4237-9dde-f059b0c403f4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: owner_name
+
+		annotation SummarizationSetBy = User
+
+	column owner_email
+		dataType: string
+		lineageTag: cfc59206-a54c-4e4b-8786-29c7a873fa66
+		sourceLineageTag: 852eace0-bec6-485a-a5af-77e6d31acee5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: owner_email
+
+		annotation SummarizationSetBy = User
+
+	column total_view_90_days
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b6222eb-55c1-44f9-ba4a-b3a8872f1d28
+		sourceLineageTag: 317b3ad4-680c-4ef0-8ac8-b0698711f754
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: total_view_90_days
+
+		annotation SummarizationSetBy = User
+
+	column distinct_viewers_90_days
+		dataType: int64
+		formatString: 0
+		lineageTag: 94c7f77e-21bc-4058-9856-f356b0903854
+		sourceLineageTag: ad4e832f-6bae-48bd-80ba-fadd483852d8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: distinct_viewers_90_days
+
+		annotation SummarizationSetBy = User
+
+	column last_viewed_date
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 4a926e8a-20bc-428e-9a17-583a00ae6352
+		sourceLineageTag: e42ff72b-cfeb-441d-9263-db0b9ce49447
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_viewed_date
+
+		annotation SummarizationSetBy = User
+
+	column creation_date
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: fde3e197-2f9c-41f2-8e06-51318a34a2a0
+		sourceLineageTag: 96d7cbfc-d08f-4fcf-8d12-96def6a5c199
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: creation_date
+
+		annotation SummarizationSetBy = User
+
+	column bobj_universe_name
+		dataType: string
+		lineageTag: 8462a5fb-18c6-4c26-90e6-9c39aa25255f
+		sourceLineageTag: c7bc558c-bc02-446e-9169-4d013aebb8df
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: bobj_universe_name
+
+		annotation SummarizationSetBy = User
+
+	column source_table_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 80d2cedf-1a7b-462f-ad7c-eb5ee3fd966d
+		sourceLineageTag: 4e5a109b-1e33-4be9-b8ef-c094bcb395d3
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: source_table_count
+
+		annotation SummarizationSetBy = User
+
+	column number_of_data_providers
+		dataType: double
+		lineageTag: 5dad249f-7ec6-46b3-ba1d-4639e4729c9c
+		sourceLineageTag: 85e8495d-33db-4422-96d7-0dc40a811bf0
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: number_of_data_providers
+
+		annotation SummarizationSetBy = User
+
+	column variable_count
+		dataType: double
+		lineageTag: 10db140d-68a1-4dd9-8ed4-d5576d582456
+		sourceLineageTag: 2dff4614-0211-4122-b751-942bc43a1673
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: variable_count
+
+		annotation SummarizationSetBy = User
+
+	column mm_model_name
+		dataType: string
+		lineageTag: 374d8474-134c-420d-a08a-b3cb6c201c78
+		sourceLineageTag: 961ccbfd-641e-4d13-950f-9c52dbc575ee
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: mm_model_name
+
+		annotation SummarizationSetBy = User
+
+	column mm_universe_type
+		dataType: string
+		lineageTag: d8f18525-b995-4834-9af4-35613d3d0b37
+		sourceLineageTag: 306fa917-e85d-48fb-af41-f033268333d4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: mm_universe_type
+
+		annotation SummarizationSetBy = User
+
+	column mm_tables_count
+		dataType: int64
+		formatString: 0
+		lineageTag: d9a965bd-fbd6-4661-97b0-9fe6c05c64ee
+		sourceLineageTag: 13b96ce3-57ce-4075-a72b-0ac1a05b855a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: mm_tables_count
+
+		annotation SummarizationSetBy = User
+
+	column mm_source_systems
+		dataType: string
+		lineageTag: 71e14ce3-27a7-408d-9d33-40643de74ce4
+		sourceLineageTag: 6934fbd2-7b7a-49aa-b33b-4b3634a6bd31
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: mm_source_systems
+
+		annotation SummarizationSetBy = User
+
+	partition bobj_metadata = entity
+		mode: directQuery
+		source
+			entityName: bobj_metadata
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

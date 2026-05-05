@@ -1,0 +1,34 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["DirectQuery to AS - Governance_Dataset_V1.1","MTable"]
+
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
+
+ref table pbi_raw_activity_log
+ref table gateway_datasource_mapping
+ref table dataset_roles_members
+ref table dashboards
+ref table datasets
+ref table reports
+ref table lineage_downstream
+ref table workspaces
+ref table users_permissions
+ref table MTable
+ref table pbi_report_usage
+ref table dax_intelligence
+ref table bpa_violations
+ref table tableau_asset_catalog
+ref table bobj_asset_inventory
+ref table tableau_metadata
+ref table bobj_metadata
+
+ref cultureInfo en-US
+

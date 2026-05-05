@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "283ed5a4e014874c5d63",
+  "position": {
+    "x": 878.61542974479323,
+    "y": 483.9143443825169,
+    "z": 38000,
+    "height": 224.38486359636258,
+    "width": 387.94250513347021,
+    "tabOrder": 29000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dataset_roles_members"
+                    }
+                  },
+                  "Property": "workspace_id"
+                }
+              },
+              "queryRef": "dataset_roles_members.workspace_id",
+              "nativeQueryRef": "Workspace ID",
+              "displayName": "Workspace ID"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dataset_roles_members"
+                        }
+                      },
+                      "Property": "member"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "dataset_roles_members.member",
+              "nativeQueryRef": "Members",
+              "displayName": "Members"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "116D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dataset_roles_members.member"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "229.71478340946194D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dataset_roles_members.workspace_id"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

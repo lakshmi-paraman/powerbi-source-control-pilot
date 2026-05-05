@@ -1,0 +1,479 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "243a392800255d099033",
+  "position": {
+    "x": 660.80106408083577,
+    "y": 274.16214360800632,
+    "z": 36000,
+    "height": 435.84751035118956,
+    "width": 609.83502456396286,
+    "tabOrder": 26000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bobj_metadata"
+                    }
+                  },
+                  "Property": "platform"
+                }
+              },
+              "queryRef": "bobj_metadata.platform",
+              "nativeQueryRef": "Platform",
+              "displayName": "Platform"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bobj_metadata"
+                    }
+                  },
+                  "Property": "asset_type"
+                }
+              },
+              "queryRef": "bobj_metadata.asset_type",
+              "nativeQueryRef": "Asset Type",
+              "displayName": "Asset Type"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bobj_metadata"
+                        }
+                      },
+                      "Property": "system_asset_id"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "Sum(bobj_metadata.system_asset_id)",
+              "nativeQueryRef": "System Count",
+              "displayName": "System Count"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bobj_metadata"
+                        }
+                      },
+                      "Property": "owner_name"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "bobj_metadata.owner_name",
+              "nativeQueryRef": "Owner Count",
+              "displayName": "Owner Count"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bobj_metadata"
+                        }
+                      },
+                      "Property": "bobj_universe_name"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "bobj_metadata.bobj_universe_name",
+              "nativeQueryRef": "Universe Count",
+              "displayName": "Universe Count"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bobj_metadata"
+                        }
+                      },
+                      "Property": "number_of_data_providers"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "Sum(bobj_metadata.number_of_data_providers)",
+              "nativeQueryRef": "Data Providers",
+              "displayName": "Data Providers"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8E8A6'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "274.6666712332801D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.workspace_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "111.99999766572465D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.dashboard_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.9999976880622D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.dataset_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83.33333333333333D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.report_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "112.57017996102915D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.column_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145.6757097511187D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.measure_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.33333333333333D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.type"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58.66665293647813D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.state"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.77901728184247D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bobj_metadata.bobj_universe_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.81606573906531D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bobj_metadata.owner_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "103.41399574432877D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bobj_metadata.system_asset_id)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "102.33429784316343D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bobj_metadata.asset_type"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9619f2a54e070d667072",
+        "ordinal": 0,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_raw_activity_log"
+              }
+            },
+            "Property": "Last Viewed Date"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "75ddf76a1a6951654370",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_raw_activity_log"
+              }
+            },
+            "Property": "Activity"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "pbi_raw_activity_log",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "Activity"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'ViewReport'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "ebaa7c3690c7adb75b6d",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_raw_activity_log"
+              }
+            },
+            "Property": "ReportName"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "82cd531b00615507995d",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "pbi_raw_activity_log"
+              }
+            },
+            "Property": "Usage Status"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

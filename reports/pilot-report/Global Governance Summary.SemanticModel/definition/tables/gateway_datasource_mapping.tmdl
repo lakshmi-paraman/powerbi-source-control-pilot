@@ -1,0 +1,30 @@
+table gateway_datasource_mapping
+	lineageTag: 09873998-c5ae-42e0-98a4-fdfcd1527b24
+	sourceLineageTag: f54694ec-3aed-4927-bf3e-f6327079e322
+
+	column datasource_id
+		dataType: string
+		lineageTag: 07398b25-0fda-45ff-b0bf-32c53c6b2daf
+		sourceLineageTag: 4da60262-0219-43e2-8eb6-a2511a84ad33
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: datasource_id
+
+		annotation SummarizationSetBy = User
+
+	column gateway_id
+		dataType: string
+		lineageTag: d8b153f8-ae35-401d-a058-8b88068e5b9f
+		sourceLineageTag: 3b6ab688-49b5-419c-8927-64e62edf360b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: gateway_id
+
+		annotation SummarizationSetBy = User
+
+	partition gateway_datasource_mapping = entity
+		mode: directQuery
+		source
+			entityName: gateway_datasource_mapping
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

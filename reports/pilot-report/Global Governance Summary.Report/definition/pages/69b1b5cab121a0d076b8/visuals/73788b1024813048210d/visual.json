@@ -1,0 +1,401 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "73788b1024813048210d",
+  "position": {
+    "x": 5,
+    "y": 513.31662380781881,
+    "z": 28000,
+    "height": 206.65993945509587,
+    "width": 1269,
+    "tabOrder": 21000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "workspace_name"
+                }
+              },
+              "queryRef": "workspaces.workspace_name",
+              "nativeQueryRef": "Workspace Name",
+              "displayName": "Workspace Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "type"
+                }
+              },
+              "queryRef": "workspaces.type",
+              "nativeQueryRef": "Type",
+              "displayName": "Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "state"
+                }
+              },
+              "queryRef": "workspaces.state",
+              "nativeQueryRef": "State",
+              "displayName": "State"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "Last Accessed Date"
+                }
+              },
+              "queryRef": "workspaces.Last Accessed Date",
+              "nativeQueryRef": "Last Accessed Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "workspaces"
+                    }
+                  },
+                  "Property": "is_on_dedicated_capacity"
+                }
+              },
+              "queryRef": "workspaces.is_on_dedicated_capacity",
+              "nativeQueryRef": "Is On Dedicated Capacity",
+              "displayName": "Is On Dedicated Capacity"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "dashboard_distinct_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(workspaces.dashboard_distinct_count)",
+              "nativeQueryRef": "Dashboards",
+              "displayName": "Dashboards"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "dataset_distinct_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(workspaces.dataset_distinct_count)",
+              "nativeQueryRef": "Datasets",
+              "displayName": "Datasets"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "report_distinct_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(workspaces.report_distinct_count)",
+              "nativeQueryRef": "Reports",
+              "displayName": "Reports"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "column_distinct_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(workspaces.column_distinct_count)",
+              "nativeQueryRef": "Columns",
+              "displayName": "Columns"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "measure_distinct_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(workspaces.measure_distinct_count)",
+              "nativeQueryRef": "Measures",
+              "displayName": "Measures"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "workspaces"
+                      }
+                    },
+                    "Property": "dashboard_distinct_count"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8E8A6'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "274.6666712332801D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.workspace_name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "111.99999766572465D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.dashboard_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.9999976880622D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.dataset_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83.33333333333333D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.report_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "112.57017996102915D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.column_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100.24158957162274D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(workspaces.measure_distinct_count)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.33333333333333D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.type"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58.66665293647813D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "workspaces.state"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

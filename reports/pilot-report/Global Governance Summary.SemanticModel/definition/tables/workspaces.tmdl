@@ -1,0 +1,335 @@
+table workspaces
+	lineageTag: e1972874-bf9c-4766-9e9d-f5420ee1f68a
+	sourceLineageTag: d9a71b1a-1c06-45b5-b6e8-1b8180be3e19
+
+	measure 'Minimum Value' = 0
+		formatString: 0
+		lineageTag: 2daeec87-11f6-4852-8502-d9093afe2b32
+
+		changedProperty = Name
+
+	column workspace_id
+		dataType: string
+		lineageTag: 297a7b4b-a44d-46bf-b26f-392fab3b6e19
+		sourceLineageTag: c742fe70-7e98-4f21-a465-ffc0bf6969c6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_id
+
+		annotation SummarizationSetBy = User
+
+	column workspace_name
+		dataType: string
+		lineageTag: 1d7bac36-0cb5-4cb5-9fba-0175c612d8f2
+		sourceLineageTag: 03ea9fe0-27ee-4d01-8eb6-e84f7593a19d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_name
+
+		annotation SummarizationSetBy = User
+
+	column state
+		dataType: string
+		lineageTag: 639c01df-aafa-4198-b0ff-40d383a1d5ab
+		sourceLineageTag: 63fd558f-1d56-46eb-9356-f90dc19895b6
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = User
+
+	column type
+		dataType: string
+		lineageTag: 3ec53b6b-64b2-4fb0-942a-b355ed79b665
+		sourceLineageTag: 86e32db8-e1b2-4532-8f2b-679183115b6a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = User
+
+	column is_on_dedicated_capacity
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 8d34e772-a3a0-4b5e-9a3c-c2e9b16badad
+		sourceLineageTag: 5cfbacd9-b703-4be9-b994-4485e58e6947
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: is_on_dedicated_capacity
+
+		annotation SummarizationSetBy = User
+
+	column report_total_count
+		dataType: int64
+		formatString: 0
+		lineageTag: f5a1366c-e262-4cc2-acf4-fb6d8a2dd8a9
+		sourceLineageTag: ca60e15c-df2c-4348-aa7f-5e18529ceca8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: report_total_count
+
+		annotation SummarizationSetBy = User
+
+	column report_distinct_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 5283dc86-7324-4755-9059-4d486bc8d539
+		sourceLineageTag: a050588f-8fa5-4d60-bd95-8cb76870be2a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: report_distinct_count
+
+		annotation SummarizationSetBy = User
+
+	column report_unique_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 22813145-2205-4eec-ae11-c0653d1fd276
+		sourceLineageTag: 11a69ee2-01f0-452d-85c6-7cfa81f07b96
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: report_unique_count
+
+		annotation SummarizationSetBy = User
+
+	column dashboard_total_count
+		dataType: int64
+		formatString: 0
+		lineageTag: d4cac53d-c9ba-4737-b2b6-f9641738eca6
+		sourceLineageTag: bbe71431-b2a3-4a5b-8263-076da606ceed
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: dashboard_total_count
+
+		annotation SummarizationSetBy = User
+
+	column dashboard_distinct_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 51427517-0d95-46ee-ad0f-571ded9a9c27
+		sourceLineageTag: d834a682-92b0-48f1-856b-952f37af221d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: dashboard_distinct_count
+
+		annotation SummarizationSetBy = User
+
+	column dashboard_unique_count
+		dataType: int64
+		formatString: 0
+		lineageTag: ce065260-211a-4523-855a-356b1ef0ae92
+		sourceLineageTag: adc1702d-d67f-4ed7-8d91-4f7039da13b9
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: dashboard_unique_count
+
+		annotation SummarizationSetBy = User
+
+	column dataset_total_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 644416b3-592b-46c5-b322-6c444fb50cdd
+		sourceLineageTag: 88e02619-4c29-47ec-afa0-fe6a0b371b54
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: dataset_total_count
+
+		annotation SummarizationSetBy = User
+
+	column dataset_distinct_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 669eabda-c48b-4160-b345-31492b99dd28
+		sourceLineageTag: a4a6d38c-6f75-4d3f-9db8-a0a1d0f838fe
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: dataset_distinct_count
+
+		annotation SummarizationSetBy = User
+
+	column dataset_unique_count
+		dataType: int64
+		formatString: 0
+		lineageTag: cb843390-0b98-41d9-9338-afe46778af69
+		sourceLineageTag: 595976ee-2428-44e8-bcb9-deb515ea624e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: dataset_unique_count
+
+		annotation SummarizationSetBy = User
+
+	column column_total_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 49e51d09-d7e5-40c8-8df2-b4ff6216156d
+		sourceLineageTag: cb3bfb22-4303-40d9-a903-c6409474bcb1
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: column_total_count
+
+		annotation SummarizationSetBy = User
+
+	column column_distinct_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 58dcbbc2-e310-4a3c-a367-7cb42cc8fc18
+		sourceLineageTag: 01cc5540-49ab-42e6-a41c-4209e98b8390
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: column_distinct_count
+
+		annotation SummarizationSetBy = User
+
+	column column_unique_count
+		dataType: int64
+		formatString: 0
+		lineageTag: ee7c3591-d009-4f9b-aef7-f78ea357aa2d
+		sourceLineageTag: d300127e-01df-4934-b9e2-aa60d1b82896
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: column_unique_count
+
+		annotation SummarizationSetBy = User
+
+	column measure_total_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 10a4d805-c867-4534-81db-9a5cf28a0c20
+		sourceLineageTag: 6147a67f-b1f1-4625-b282-95c0b4b9f590
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: measure_total_count
+
+		annotation SummarizationSetBy = User
+
+	column measure_distinct_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 8de7fa8e-b2b5-4caa-ae70-8b31162ed131
+		sourceLineageTag: 008e0535-8515-4d1e-a700-4374ef56805f
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: measure_distinct_count
+
+		annotation SummarizationSetBy = User
+
+	column measure_unique_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 209c9606-7dce-4669-9260-b16f76333388
+		sourceLineageTag: 8fc216c8-35bb-414f-903e-ee8fadc3eaab
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: measure_unique_count
+
+		annotation SummarizationSetBy = User
+
+	column gateway_total_count
+		dataType: int64
+		formatString: 0
+		lineageTag: d99a60ab-7ed2-41d1-80b0-cc4658dc7198
+		sourceLineageTag: 691370d6-a976-42fd-bad1-1105d88f529a
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: gateway_total_count
+
+		annotation SummarizationSetBy = User
+
+	column gateway_distinct_count
+		dataType: int64
+		formatString: 0
+		lineageTag: f1794d4d-6828-46e5-bdd5-4fae1106e313
+		sourceLineageTag: ccdbe817-3d54-4f08-93d1-05dd3f7a24eb
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: gateway_distinct_count
+
+		annotation SummarizationSetBy = User
+
+	column gateway_unique_count
+		dataType: int64
+		formatString: 0
+		lineageTag: f32f93f9-4545-46e4-a244-90413edd457b
+		sourceLineageTag: 9280afec-699a-4178-8315-09532c90cdd6
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: gateway_unique_count
+
+		annotation SummarizationSetBy = User
+
+	column server_total_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 9cb02f7a-de30-4eb5-af5b-ae7700adfbb0
+		sourceLineageTag: 803323bc-a4eb-47d6-893e-ba9420d5e793
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: server_total_count
+
+		annotation SummarizationSetBy = User
+
+	column server_distinct_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 51bc219c-87fe-401e-9fdd-7617e85af383
+		sourceLineageTag: d2833776-7006-4974-990f-ac040a359d0d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: server_distinct_count
+
+		annotation SummarizationSetBy = User
+
+	column server_unique_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 148dc4c2-b2e3-4f7d-9c82-4edc16346354
+		sourceLineageTag: 82ad227f-0667-45fe-be80-7004ff2ebdb5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: server_unique_count
+
+		annotation SummarizationSetBy = User
+
+	column last_accessed_utc
+		dataType: string
+		lineageTag: 44b2fdae-1cae-40ed-9625-bc1d937bcad0
+		sourceLineageTag: f089b8aa-e57a-439e-b3d6-b867a8e3a393
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: last_accessed_utc
+
+		annotation SummarizationSetBy = User
+
+	column capacity_id
+		dataType: string
+		lineageTag: a166f843-379a-4a1f-b751-1b1858747e4e
+		sourceLineageTag: bce7d69f-dfd4-4f9e-944d-619d222f04b5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: capacity_id
+
+		annotation SummarizationSetBy = User
+
+	column 'Last Accessed Date' =
+			
+			DATE(
+			    VALUE(LEFT([last_accessed_utc], 4)),
+			    VALUE(MID([last_accessed_utc], 6, 2)),
+			    VALUE(MID([last_accessed_utc], 9, 2))
+			)
+		formatString: Short Date
+		lineageTag: 77755327-99d1-459a-977a-76af1851ca24
+		summarizeBy: none
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	partition workspaces = entity
+		mode: directQuery
+		source
+			entityName: workspaces
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

@@ -1,0 +1,357 @@
+table pbi_raw_activity_log
+	lineageTag: 5392d722-512b-483f-9ce4-7dbda2f79286
+	sourceLineageTag: 7a1bb137-6275-4028-a5c4-9dce3f4ca54e
+
+	measure 'Dataset Count' =
+			
+			DISTINCTCOUNT(pbi_raw_activity_log[Dataset_ID]
+			)
+		formatString: 0
+		lineageTag: b4beeedf-1d5f-46a3-94ca-7e05add751d5
+
+		changedProperty = Name
+
+	measure 'Workspace Rank' = ```
+			
+			RANKX(
+			    ALLSELECTED(pbi_raw_activity_log[Workspace_ID]),
+			    [Dataset Count],
+			    ,
+			    DESC,
+			    DENSE
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 8d6746ad-242e-44ae-9cff-c11bd32435b6
+
+		changedProperty = Name
+
+	measure 'Workspace Color' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Workspace Rank] = 1, "#3C3AC4",   -- Blue
+			    [Workspace Rank] = 2, "#ff7f0e",   -- Orange
+			    [Workspace Rank] = 3, "#2ca02c",   -- Green
+			    "#D9D9D9"                          -- Gray
+			)
+		lineageTag: 44a61132-34a4-4c04-9a6a-cfc9deedcfc3
+
+		changedProperty = Name
+
+	measure 'min date' = EXTERNALMEASURE("min date", STRING, "DirectQuery to AS - Governance_Dataset_V1.1")
+		formatString: General Number
+		lineageTag: 0c2004bc-7fd4-4585-ad3c-d28926fbbee6
+		sourceLineageTag: 54817a68-3641-4cb0-8121-009426e64142
+		dataCategory: Uncategorized
+
+	measure 'max date' = EXTERNALMEASURE("max date", STRING, "DirectQuery to AS - Governance_Dataset_V1.1")
+		formatString: General Number
+		lineageTag: f1985923-ba2a-4b4c-a235-ac8c85328cd8
+		sourceLineageTag: ca7aa335-6167-4b0e-8e96-28c096ce61d2
+		dataCategory: Uncategorized
+
+	measure 'No of days' = EXTERNALMEASURE("No of days", INTEGER, "DirectQuery to AS - Governance_Dataset_V1.1")
+		formatString: 0
+		lineageTag: cb0b3983-ac67-4139-a63a-8531ea2e6d91
+		sourceLineageTag: 3bcc9be0-69db-41ca-a773-e46244368ed9
+		dataCategory: Uncategorized
+
+	measure 'Event Max Date' = MAX(pbi_raw_activity_log[EventDate])
+		formatString: General Date
+		lineageTag: 769df3e8-4079-4310-b6b5-0d0d948eb0d0
+
+		changedProperty = Name
+
+	measure 'Event Min Date' = min(pbi_raw_activity_log[EventDate])
+		formatString: General Date
+		lineageTag: 1f955b7a-aa61-4e20-8349-13e194bf86ff
+
+		changedProperty = Name
+
+	measure Days = DISTINCTCOUNT(pbi_raw_activity_log[EventDate]) & " Days "
+		lineageTag: 80ec118b-6b48-4f22-97e8-484e3880a3f9
+
+		changedProperty = Name
+
+	measure 'Unique users per report' = CALCULATE(DISTINCTCOUNT(pbi_raw_activity_log[User_ID]),pbi_raw_activity_log[Activity]="ViewReport")
+		formatString: 0
+		lineageTag: f945bb15-5c98-4579-8239-9e31820b91dd
+
+		changedProperty = Name
+
+	measure 'Last Viewed Date' = CALCULATE(max(pbi_raw_activity_log[EventDate]),pbi_raw_activity_log[Activity] IN {"ViewReport","OpenReport","AccessReport"})
+		formatString: General Date
+		lineageTag: 019ae4d0-55bd-4de5-8496-c97911a8db95
+
+		changedProperty = Name
+
+	measure 'Days Since Last Access' =
+			
+			VAR LastDate1 = [Last Viewed Date]
+			RETURN
+			IF(
+			    ISBLANK(LastDate1),
+			    BLANK(),
+			    DATEDIFF(LastDate1, TODAY(), DAY)
+			)
+		formatString: 0
+		lineageTag: c665541b-ab4f-46dd-af35-71606e54b826
+
+		changedProperty = Name
+
+	measure 'Not Accessed 30 Days' =
+			
+			VAR LastDate1 = [Last Viewed Date]
+			RETURN
+			IF(
+			    ISBLANK(LastDate1) ||
+			    LastDate1 <= TODAY() - 60,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 9fe3037b-dbbd-4766-9cc1-66a8758d68cc
+
+		changedProperty = Name
+
+	measure 'Usage Status' =
+			
+			VAR LastDate1 = [Last Viewed Date]
+			VAR DaysIdle =
+			IF(ISBLANK(LastDate1), 9999, DATEDIFF(LastDate1,TODAY(),DAY))
+			RETURN
+			SWITCH(
+			TRUE(),
+			ISBLANK(LastDate1), "Never Viewed",
+			DaysIdle > 180, "Archive Candidate",
+			DaysIdle > 90, "Dormant",
+			DaysIdle > 60, "Cold",
+			"Active"
+			)
+		lineageTag: 41d6755e-5425-471c-b6d7-169ed173f77e
+
+		changedProperty = Name
+
+	measure 'Total Report Views' = ```
+			
+			CALCULATE(
+			    COUNTROWS(pbi_raw_activity_log),
+			    pbi_raw_activity_log[Activity] = "ViewReport"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 0548fa1f-997c-476f-b757-2d73f204bd5d
+
+		changedProperty = Name
+
+	measure 'Distinct Reports Viewed' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(pbi_raw_activity_log[Report_ID]),
+			    pbi_raw_activity_log[Activity] = "ViewReport"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 2173fdd4-8c58-4eba-b6b6-cd488e1be6a2
+
+		changedProperty = Name
+
+	measure 'Active Report Users' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(pbi_raw_activity_log[User_ID]),
+			    pbi_raw_activity_log[Activity] = "ViewReport"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: d4aaf184-1d7c-4361-a007-498710101dfd
+
+		changedProperty = Name
+
+	measure 'Active Workspaces (Reports)' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(pbi_raw_activity_log[Workspace_ID]),
+			    pbi_raw_activity_log[Activity] = "ViewReport"
+			)
+			
+			```
+		formatString: 0
+		lineageTag: c9f7f353-13c8-43dd-a719-95d4a553e867
+
+		changedProperty = Name
+
+	measure 'Avg Views per Report' =
+			
+			DIVIDE([Total Report Views], [Distinct Reports Viewed])/100
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c978bace-0a56-4599-b508-a31a425dd34c
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	column Activity
+		dataType: string
+		lineageTag: 928db3f7-f0f9-4bbf-9f4f-5bd29400dd9f
+		sourceLineageTag: 0ebdb4a2-6780-422a-94ce-c81ef1a8a398
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Activity
+
+		annotation SummarizationSetBy = User
+
+	column Workspace_ID
+		dataType: string
+		lineageTag: 23ceeb9d-90f9-490b-af26-5bc2fa16ffd5
+		sourceLineageTag: d39a7bd9-8d96-4095-ad26-a57e7714a96a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workspace_ID
+
+		annotation SummarizationSetBy = User
+
+	column Report_ID
+		dataType: string
+		lineageTag: e8f3f2f1-89ff-4842-aaa4-3afbf7bb3112
+		sourceLineageTag: a90f0f12-8d13-4dc7-b76f-bb9e98f14395
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Report_ID
+
+		annotation SummarizationSetBy = User
+
+	column Dataset_ID
+		dataType: string
+		lineageTag: b6aa9b58-1542-4c68-a5a5-8bef3f1d0692
+		sourceLineageTag: aa1551f1-cf13-44f9-b1bf-467b1a52852a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dataset_ID
+
+		annotation SummarizationSetBy = User
+
+	column Dataflow_ID
+		dataType: string
+		lineageTag: 4f6addcf-6788-4f81-ad60-2d3c4889105a
+		sourceLineageTag: 9e964afc-2a57-418b-ae28-7d9d159faf80
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dataflow_ID
+
+		annotation SummarizationSetBy = User
+
+	column Dashboard_ID
+		dataType: string
+		lineageTag: 4a436788-02c6-463d-85d0-867411755e81
+		sourceLineageTag: 3e6908d4-0558-414b-b5d5-7fcd5717d180
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dashboard_ID
+
+		annotation SummarizationSetBy = User
+
+	column App_ID
+		dataType: string
+		lineageTag: dcf45c15-2ad5-49f7-ae3b-046c0bf27204
+		sourceLineageTag: 84d45302-2716-481a-b692-c63b995f2d9c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: App_ID
+
+		annotation SummarizationSetBy = User
+
+	column Scorecard_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 99f9ed37-7cc2-496a-9338-09a90e99a881
+		sourceLineageTag: f6a0eec3-8600-4bf6-bc4b-095b444d1912
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Scorecard_ID
+
+		annotation SummarizationSetBy = User
+
+	column Datamart_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 329cc391-d6cf-4373-8739-8467c4fddddf
+		sourceLineageTag: 5ce64ee4-7553-442e-8c38-c836382a18aa
+		dataCategory: Uncategorized
+		summarizeBy: count
+		sourceColumn: Datamart_ID
+
+		annotation SummarizationSetBy = User
+
+	column User_ID
+		dataType: string
+		lineageTag: f8328513-6605-4b39-bc58-7020c8ef2cf2
+		sourceLineageTag: 3c20d7a0-28ff-4256-b1c6-8a5697e3bae9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: User_ID
+
+		annotation SummarizationSetBy = User
+
+	column CreationTime
+		dataType: string
+		lineageTag: 132af1e9-09ca-4afe-bd28-b293bb54e390
+		sourceLineageTag: 8d1788fb-5003-414c-a977-13dc3344d286
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: CreationTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 79d87eec-d15e-45da-bfa3-1775df66c42c
+		sourceLineageTag: 939a1b4d-b838-4418-aa2c-c91aa6f0d289
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = User
+
+	column EventDate =
+			
+			DATE(
+			    VALUE(LEFT([CreationTime], 4)),
+			    VALUE(MID([CreationTime], 6, 2)),
+			    VALUE(MID([CreationTime], 9, 2))
+			)
+		formatString: dd-mmm-yy
+		lineageTag: b57df861-cc79-4d78-90fd-435610174812
+		summarizeBy: none
+
+		changedProperty = Name
+
+		changedProperty = DataType
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ReportName = LOOKUPVALUE(reports[report_name],reports[report_id],pbi_raw_activity_log[Report_ID])
+		lineageTag: f768a499-2786-4e23-815d-c2f767294402
+		summarizeBy: none
+
+		changedProperty = Name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pbi_raw_activity_log = entity
+		mode: directQuery
+		source
+			entityName: pbi_raw_activity_log
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

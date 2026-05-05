@@ -1,0 +1,146 @@
+table dax_intelligence
+	lineageTag: 4fcd1ed0-2e9a-419e-b284-2b83f09ff8e6
+	sourceLineageTag: ad93fde9-0d6e-4acb-80fb-df949c998e36
+
+	column Workspace_Id
+		dataType: string
+		isNullable: false
+		lineageTag: bb1fa50c-657b-4a2e-8f30-74a99c0acf4f
+		sourceLineageTag: d88bffba-ab9e-4bc7-9260-80aa7363b620
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workspace_Id
+
+		annotation SummarizationSetBy = User
+
+	column Workspace_Name
+		dataType: string
+		lineageTag: 7418e06e-a537-4fb0-950d-31163b8679ea
+		sourceLineageTag: 75c17ea9-38ac-4a0f-a4f4-2420273f5af4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workspace_Name
+
+		annotation SummarizationSetBy = User
+
+	column Dataset_Id
+		dataType: string
+		lineageTag: 40560415-a27c-485d-a400-a9d778bcfae0
+		sourceLineageTag: 70208a21-26cd-4a0e-aad2-0c0c19418e37
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dataset_Id
+
+		annotation SummarizationSetBy = User
+
+	column Dataset_Name
+		dataType: string
+		lineageTag: d0acb550-3ae9-4901-b695-939c3754524f
+		sourceLineageTag: 1c640b9d-3317-424a-b578-5c9c8d1bb3d8
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dataset_Name
+
+		annotation SummarizationSetBy = User
+
+	column Table_Name
+		dataType: string
+		lineageTag: f7c84897-b631-469a-808e-ec01abf93cea
+		sourceLineageTag: b12011bb-3064-4fda-9156-2f2e6ebda35d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Table_Name
+
+		annotation SummarizationSetBy = User
+
+	column Measure_Name
+		dataType: string
+		lineageTag: 68003ad4-59a0-4e69-b303-4fea8559e596
+		sourceLineageTag: 908207d3-7bc8-451d-a6c5-68c1729dbdeb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Measure_Name
+
+		annotation SummarizationSetBy = User
+
+	column Expression
+		dataType: string
+		lineageTag: be8b9e04-2264-4b0c-95e9-f28a7785fef8
+		sourceLineageTag: 144bdf2b-5d52-4c23-a872-ef8eb2deaa64
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Expression
+
+		annotation SummarizationSetBy = User
+
+	column Storage_Mode
+		dataType: string
+		lineageTag: dca36f33-d4b0-44e0-9f80-913d0ac07f28
+		sourceLineageTag: 8dcf9579-36e2-4319-a980-c883dfeee364
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Storage_Mode
+
+		annotation SummarizationSetBy = User
+
+	column Expression_Length
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ed5a48f-d02c-4e88-b8f3-bb597ed34bbc
+		sourceLineageTag: c61e6517-736a-4629-9443-6e1ba269d803
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Expression_Length
+
+		annotation SummarizationSetBy = User
+
+	column Iterator_Count
+		dataType: int64
+		formatString: 0
+		lineageTag: a7889000-f36d-4fdc-9192-9ebaec6ada52
+		sourceLineageTag: 17288ac8-4c57-413c-bea3-a95e6e24eb68
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Iterator_Count
+
+		annotation SummarizationSetBy = User
+
+	column Time_Intelligence
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e01e48f3-b66c-49aa-805d-e1da754a0bca
+		sourceLineageTag: c890b65e-3a1e-4563-98dd-109f380c0a02
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Time_Intelligence
+
+		annotation SummarizationSetBy = User
+
+	column Volatile_Functions
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a6aca92d-8be3-4bb8-b014-9ef565bf0050
+		sourceLineageTag: 3f68582b-9f51-48c4-ac1b-2f38f9ea0fed
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Volatile_Functions
+
+		annotation SummarizationSetBy = User
+
+	column Has_DIVIDE
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 5037e8cb-383a-4425-bbfa-783df40b02c1
+		sourceLineageTag: 2df3e9d9-39e9-406c-8309-bec17951ec9d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Has_DIVIDE
+
+		annotation SummarizationSetBy = User
+
+	partition dax_intelligence = entity
+		mode: directQuery
+		source
+			entityName: dax_intelligence
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

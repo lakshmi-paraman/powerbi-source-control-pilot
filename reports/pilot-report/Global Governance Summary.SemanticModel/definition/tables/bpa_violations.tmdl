@@ -1,0 +1,121 @@
+table bpa_violations
+	lineageTag: baa441c2-24fc-4c2d-8d77-aa841120021a
+	sourceLineageTag: 0c552db8-a0ba-4d28-9526-e73c91bd843f
+
+	column Rule_ID
+		dataType: string
+		lineageTag: 7b3ae4d6-4846-4721-9718-68933964f758
+		sourceLineageTag: fa8344a9-4c8d-4184-b2fd-cf63aee75373
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Rule_ID
+
+		annotation SummarizationSetBy = User
+
+	column Severity
+		dataType: string
+		lineageTag: f7415a63-f23e-4c00-9f51-af0ef53d41c3
+		sourceLineageTag: 876e5407-dafd-4c83-a00c-d3ec0c267883
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Severity
+
+		annotation SummarizationSetBy = User
+
+	column Description
+		dataType: string
+		lineageTag: 1121a1f3-a1cf-4e33-9e49-cb6ab023e7d6
+		sourceLineageTag: ae86bfaa-b17f-43ac-926e-8fcfbf5b4fd3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = User
+
+	column Workspace_Id
+		dataType: string
+		isNullable: false
+		lineageTag: fd3a402a-683b-4ac1-b809-9d1c7b63c110
+		sourceLineageTag: ba403c63-9b94-41cd-8286-2b0100336585
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workspace_Id
+
+		annotation SummarizationSetBy = User
+
+	column Workspace_Name
+		dataType: string
+		lineageTag: 9ac385d7-cdad-4018-a602-4789707f27f6
+		sourceLineageTag: 83897b52-03b5-4da2-bd0f-09298f9af433
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Workspace_Name
+
+		annotation SummarizationSetBy = User
+
+	column Dataset_Id
+		dataType: string
+		lineageTag: e0143e31-9489-425a-9612-b9a79cbe7aef
+		sourceLineageTag: 88676e1d-0855-4b22-9aa2-e944935c0c49
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dataset_Id
+
+		annotation SummarizationSetBy = User
+
+	column Dataset_Name
+		dataType: string
+		lineageTag: 499ded6d-3957-4842-b90c-2df61322354e
+		sourceLineageTag: 56ffd25e-ef5b-4710-8fd8-6702ae65b2ef
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Dataset_Name
+
+		annotation SummarizationSetBy = User
+
+	column Table_Name
+		dataType: string
+		lineageTag: f2edd085-b04a-4233-a493-e9faace801d7
+		sourceLineageTag: 587cd349-040a-49b4-82bb-f13474ea32b5
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Table_Name
+
+		annotation SummarizationSetBy = User
+
+	column Measure_Name
+		dataType: string
+		lineageTag: ae1c8d82-c6c1-4888-9058-5f5ff6f5b70c
+		sourceLineageTag: 71135fbc-2d3b-48b9-b288-d62a6bd14837
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Measure_Name
+
+		annotation SummarizationSetBy = User
+
+	column Expression
+		dataType: string
+		lineageTag: a7a739d4-c173-4342-a8d5-0150be069e1d
+		sourceLineageTag: a8242cbc-008e-4ea3-8395-b65e28bdaafb
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Expression
+
+		annotation SummarizationSetBy = User
+
+	column Storage_Mode
+		dataType: string
+		lineageTag: d05a73b3-ab43-4497-a89a-cf235867232c
+		sourceLineageTag: a5bf4567-d792-450b-a23e-2294e72076db
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Storage_Mode
+
+		annotation SummarizationSetBy = User
+
+	partition bpa_violations = entity
+		mode: directQuery
+		source
+			entityName: bpa_violations
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

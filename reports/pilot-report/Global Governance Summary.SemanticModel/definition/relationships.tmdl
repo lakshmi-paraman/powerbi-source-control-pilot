@@ -1,0 +1,42 @@
+relationship 7675f9a1-5e35-4606-9f93-2c28212abad8
+	fromColumn: workspaces.workspace_id
+	toColumn: datasets.workspace_id
+
+relationship a50daaf8-7aa8-45cb-9192-fbb633631698
+	fromColumn: workspaces.workspace_id
+	toColumn: dashboards.workspace_id
+
+relationship 5614b0f8-680b-4d3c-bf50-b312bba41765
+	fromColumn: workspaces.workspace_id
+	toColumn: dataset_roles_members.workspace_id
+
+relationship ba26aab5-4e04-4e17-a376-80a95b7519b2
+	fromColumn: workspaces.workspace_id
+	toColumn: lineage_downstream.workspace_id
+
+relationship e7e3e64f-55ee-472a-9a0b-d1323869be34
+	fromColumn: workspaces.workspace_id
+	toColumn: reports.workspace_id
+
+relationship 70b67c8a-e61d-4c72-87c6-50dd4240da84
+	fromColumn: workspaces.workspace_id
+	toColumn: users_permissions.workspace_id
+
+relationship ea2b940f-c9cb-49ce-b16f-c9535d221216
+	toCardinality: many
+	fromColumn: pbi_raw_activity_log.Workspace_ID
+	toColumn: workspaces.workspace_id
+
+relationship 21d18049-d194-4b9c-9c39-1f5e9d1afacf
+	toCardinality: many
+	fromColumn: pbi_raw_activity_log.Report_ID
+	toColumn: pbi_report_usage.System_Asset_ID
+
+relationship 5a5c445a-8b16-43fa-89d6-95c48da79567
+	fromColumn: workspaces.workspace_id
+	toColumn: bpa_violations.Workspace_Id
+
+relationship 1c768cee-b2b1-4dc2-ae2f-1ff631799034
+	fromColumn: workspaces.workspace_id
+	toColumn: dax_intelligence.Workspace_Id
+

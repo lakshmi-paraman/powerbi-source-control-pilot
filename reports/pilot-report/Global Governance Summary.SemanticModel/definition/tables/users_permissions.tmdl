@@ -1,0 +1,115 @@
+table users_permissions
+	lineageTag: ea19ba6f-b67d-4c06-b38f-85dbe317da64
+	sourceLineageTag: 08fa9b4a-96a0-4d76-9221-3efacc60bb38
+
+	measure 'Viewer Name' = ```
+			
+			VAR Email =
+			    USERPRINCIPALNAME()
+			
+			VAR LocalPart =
+			    LEFT ( Email, FIND ( "@", Email ) - 1 )
+			
+			VAR SeparatorPos =
+			    FIND ( ".", LocalPart )
+			
+			VAR FirstRaw =
+			    LEFT ( LocalPart, SeparatorPos - 1 )
+			
+			VAR LastRaw =
+			    MID ( LocalPart, SeparatorPos + 1, LEN ( LocalPart ) )
+			
+			VAR FirstName =
+			    UPPER ( LEFT ( FirstRaw, 1 ) )
+			        & LOWER ( MID ( FirstRaw, 2, LEN ( FirstRaw ) ) )
+			
+			VAR LastName =
+			    UPPER ( LEFT ( LastRaw, 1 ) )
+			        & LOWER ( MID ( LastRaw, 2, LEN ( LastRaw ) ) )
+			
+			RETURN
+			    FirstName & " " & LastName
+			
+			```
+		lineageTag: e6dd1005-e4c7-44bd-8960-b6037b2a9c0d
+
+		changedProperty = Name
+
+	column workspace_id
+		dataType: string
+		isNullable: false
+		lineageTag: cd25ea43-7d8f-4e88-8661-897a73c967aa
+		sourceLineageTag: b7d146f8-86a3-409a-aee8-21baa967f188
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: workspace_id
+
+		annotation SummarizationSetBy = User
+
+	column object_type
+		dataType: string
+		lineageTag: 0652ac10-05c1-4885-b095-16bdf865c7b2
+		sourceLineageTag: 6ef4d101-61eb-4c0d-bbca-93ef43464553
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: object_type
+
+		annotation SummarizationSetBy = User
+
+	column object_id
+		dataType: string
+		lineageTag: f29afe31-629e-42c4-8b11-73cb9e6bdefa
+		sourceLineageTag: ecd642be-e0f2-4829-bfbc-dfc730b8de2e
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: object_id
+
+		annotation SummarizationSetBy = User
+
+	column principal_type
+		dataType: string
+		lineageTag: 286ac88c-0193-488f-98cd-0739cf2aa86d
+		sourceLineageTag: 61037888-b7f8-4142-9bb0-191d29b094ea
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: principal_type
+
+		annotation SummarizationSetBy = User
+
+	column principal_identifier
+		dataType: string
+		lineageTag: 56b6057b-f712-4b9a-8495-a8c3542e64ee
+		sourceLineageTag: c3f751a1-8f18-4b98-8ae5-4316efa088cd
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: principal_identifier
+
+		annotation SummarizationSetBy = User
+
+	column access_right
+		dataType: double
+		lineageTag: 36f0bfc1-922d-43f6-8498-a60856a31a1a
+		sourceLineageTag: 9fbe9fcf-421e-4737-bc2a-d43a445b08e9
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: access_right
+
+		annotation SummarizationSetBy = User
+
+	column dt
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: ecaf10c3-d2fc-4aa3-9247-3d7b8cf18df3
+		sourceLineageTag: d9e7f145-7443-4ae7-89ec-9d886dbd87f1
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dt
+
+		annotation SummarizationSetBy = User
+
+	partition users_permissions = entity
+		mode: directQuery
+		source
+			entityName: users_permissions
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

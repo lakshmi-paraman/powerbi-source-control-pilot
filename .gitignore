@@ -1,0 +1,22 @@
+# Power BI temporary/cache files
+*.tmp
+*.log
+*.bak
+*.pbi.cache
+*.pbi.local
+
+# Local user/system files
+*.user
+*.suo
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# Secrets
+*.key
+*.secret
+*.env
+
+# Do not commit PBIX if PBIP is source of truth
+*.pbix

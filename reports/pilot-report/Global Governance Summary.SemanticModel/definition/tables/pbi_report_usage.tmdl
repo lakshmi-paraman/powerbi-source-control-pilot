@@ -1,0 +1,75 @@
+table pbi_report_usage
+	lineageTag: f4cef88e-6e48-4eb0-959a-b9bbba741f67
+	sourceLineageTag: 25a7792f-8de9-4e15-8e66-3a045d7bb53f
+
+	column System_Asset_ID
+		dataType: string
+		lineageTag: e537ba56-07c8-4c21-9532-7b9c088e09f2
+		sourceLineageTag: b1ea250e-bb0b-4bf0-bb43-9e760863f956
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: System_Asset_ID
+
+		annotation SummarizationSetBy = User
+
+	column Total_Activity_90_Days
+		dataType: int64
+		formatString: 0
+		lineageTag: f9f88888-ef5f-4af8-be23-2764b207271c
+		sourceLineageTag: 74aa403a-583e-4fbc-8152-0d7e77b941f5
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Total_Activity_90_Days
+
+		annotation SummarizationSetBy = User
+
+	column Distinct_Users_90_Days
+		dataType: int64
+		formatString: 0
+		lineageTag: 64867c5e-ab2d-4d76-8a88-bdd6de0ad776
+		sourceLineageTag: 9fac811f-4a59-44fb-8e4d-9911c0b935f4
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Distinct_Users_90_Days
+
+		annotation SummarizationSetBy = User
+
+	column Last_Viewed_Date
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 524809f7-f42a-46be-8ffc-eeab8fa4a936
+		sourceLineageTag: 399e7f70-8ebe-462e-845e-6c09100e057f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Last_Viewed_Date
+
+		annotation SummarizationSetBy = User
+
+	column Inactive_Flag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 57f71aa2-0136-4e94-9211-842ea7456f0c
+		sourceLineageTag: 8a35191c-0f76-4fe0-951b-b650a6b80bc7
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: Inactive_Flag
+
+		annotation SummarizationSetBy = User
+
+	column Usage_Score
+		dataType: int64
+		formatString: 0
+		lineageTag: 63d8fbf7-0cbf-4c39-8bf2-d0fd7f0d7ec1
+		sourceLineageTag: a5885e6b-38d7-48a8-97f8-2c677d110c0d
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: Usage_Score
+
+		annotation SummarizationSetBy = User
+
+	partition pbi_report_usage = entity
+		mode: directQuery
+		source
+			entityName: pbi_report_usage
+			expressionSource: 'DirectQuery to AS - Governance_Dataset_V1.1'
+

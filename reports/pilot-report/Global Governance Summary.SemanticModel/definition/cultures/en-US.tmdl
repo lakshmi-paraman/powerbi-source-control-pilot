@@ -1,0 +1,324 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "benchmarking_c2r1_facility.c2r1_production_line_ratio_headcount_total_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Benchmarking C2R1 Facility",
+			          "ConceptualProperty": "C2R1 Production Line Ratio Headcount Total %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Production %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "benchmarking_c2r1_facility.c2r1_total_mfg_lab_prod_pc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Benchmarking C2R1 Facility",
+			          "ConceptualProperty": "C2R1 Total Mfg Lab Prod PC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mfg. Labor Prod. Physical per hour": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "benchmarking_c2r1_facility_line.c2r1_average_line_headcount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Benchmarking C2R1 Facility Line",
+			          "ConceptualProperty": "C2R1 Average Line Headcount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Average Line Headcount": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "benchmarking_c2r1_facility_line.c2r1_line_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Benchmarking C2R1 Facility Line",
+			          "ConceptualProperty": "C2R1 Line Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Number of Lines": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "workspaces.workspace_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "workspaces",
+			          "ConceptualProperty": "workspace_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Workspace Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "workspaces.state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "workspaces",
+			          "ConceptualProperty": "state"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "State": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "workspaces.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "workspaces",
+			          "ConceptualProperty": "type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "workspaces.is_on_dedicated_capacity": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "workspaces",
+			          "ConceptualProperty": "is_on_dedicated_capacity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Is On Dedicated Capacity": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Is_On_Dedicated_Capacity": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "reports.modified_by": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "reports",
+			          "ConceptualProperty": "modified_by"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "workspaces.capacity_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "workspaces",
+			          "ConceptualProperty": "capacity_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Capacity Id": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "workspaces.last_accessed_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "workspaces",
+			          "ConceptualProperty": "Last Accessed Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Last Accessed": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dataset_roles_members.workspace_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dataset_roles_members",
+			          "ConceptualProperty": "workspace_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Workspace ID": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "bobj_metadata.bobj_universe_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bobj_metadata",
+			          "ConceptualProperty": "bobj_universe_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Universe Name": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "bobj_metadata.platform": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bobj_metadata",
+			          "ConceptualProperty": "platform"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Platform": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "bobj_metadata.asset_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bobj_metadata",
+			          "ConceptualProperty": "asset_type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Asset Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

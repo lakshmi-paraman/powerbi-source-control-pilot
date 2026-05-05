@@ -1,0 +1,1240 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Details",
+  "name": "b65d97de39c26082a340",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "4837d63e93a607d57e96",
+      "06e3c64e849b10203c04",
+      "596d375210edba2d9803",
+      "3e5e81623cbc114d9660",
+      "2c1aa1a020b01646a861",
+      "283ed5a4e014874c5d63",
+      "ded33f7ba04459d413b3",
+      "569d5b66061d1803daa0",
+      "9dfc6a8e6927c2006094",
+      "35af10c50ede47583589",
+      "d43a43290952a873a266"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "21703f9726bc5036a0a3",
+    "sections": {
+      "21703f9726bc5036a0a3": {
+        "visualContainers": {
+          "35af10c50ede47583589": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "d43a43290952a873a266": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "08b4c4ba2b143e02223c": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "097bc29eb6aec661de7b": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "0f98ebd28cc070b66c88": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "115d71ea80a348de783c": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "11eb1724db84799903ae": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "283ed5a4e014874c5d63": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9bf775aaa31889841749",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dataset_roles_members"
+                        }
+                      },
+                      "Property": "workspace_id"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "90c1e01de19060067e8b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "dataset_roles_members"
+                            }
+                          },
+                          "Property": "member"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "2c1aa1a020b01646a861": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2ef67b5aa05a20aa5098",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "User_ID"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "86901619d0cde3e0009b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Distinct Reports Viewed"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Distinct Reports Viewed"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "User_ID"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "35d987d0d6e2a66297e4": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "3c3f79bbd11b35bede89": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "3e5e81623cbc114d9660": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4646cf99d4380e12e538",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "ReportName"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4c8e346d3770563b41ba",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Total Report Views"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Total Report Views"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "ReportName"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "4594622c005545ec449d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d5e2563a02a757c2adc7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_report_usage"
+                        }
+                      },
+                      "Property": "Inactive_Flag"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_report_usage"
+                        }
+                      },
+                      "Property": "Inactive_Flag"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "4913043c6ad60629524b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "4ed03b666811509407a1": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "57fe65618275a1867d80": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "596d375210edba2d9803": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "463c27a13313c869ae64",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "object_id"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "eec72002bb6dd8b05263",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "object_type"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c15dd84cc65bb1ecd820",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "principal_identifier"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1a4e1f56c0d85ba5172d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "principal_type"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c67ef6feb9e09d5d4c97",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "workspace_id"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "05e3ed45c923c57a0ec1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "access_right"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "edef8cf60715dab004a1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "dt"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "0e94d299e200ee289a9e": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "3c0492a4e6a5331c7d9d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "404185e017bc8bb71173": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "6b176f8278146be4ee3d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "d683d93ec140e75706d3": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "6c7b9449957ace8c3c39": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "70ef6425063c6169d0b0": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "7acf2944e3a0880cec42": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "87ec864a101050600e82": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "903e0e997b6ca51212ea": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "9522f0bab3d4078c33b3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "59e15c006e7077210adc",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "EventDate"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "p",
+                                "Entity": "pbi_raw_activity_log",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Comparison": {
+                                    "ComparisonKind": 2,
+                                    "Left": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "p"
+                                          }
+                                        },
+                                        "Property": "EventDate"
+                                      }
+                                    },
+                                    "Right": {
+                                      "Literal": {
+                                        "Value": "datetime'2026-03-11T00:00:00'"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "startDate": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "datetime'2026-03-11T00:00:00'"
+                            }
+                          }
+                        },
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Between'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "EventDate"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "EventDate"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "9765ac10950aa2000464": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "992331fec977816b9c55": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "32626c7da0e0a8533bec": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "15875a9040445c8ec908",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Distinct Reports Viewed"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Distinct Reports Viewed"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "6e1b3ddc73c522354c6e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9b325e3a000ec490281b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Active Workspaces (Reports)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Active Workspaces (Reports)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "7abd7533a1593e6aeb62": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0d0f6c6aad9ab3503c2d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Active Report Users"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Active Report Users"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "cf93866dbb07b5605568": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ab45fe3fc03e2a7f3bb4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "workspace_id"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "0a55245526141eeb9977",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "w",
+                        "Entity": "workspaces",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "w"
+                                    }
+                                  },
+                                  "Property": "type"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Personal'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "type"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "69ca3384cb3ce21b010c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "pbi_report_usage"
+                            }
+                          },
+                          "Property": "Total_Activity_90_Days"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "pbi_report_usage"
+                            }
+                          },
+                          "Property": "Total_Activity_90_Days"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "e26b0774a9a15e021139": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "afaabed2d8344021dc90",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Total Report Views"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pbi_raw_activity_log"
+                        }
+                      },
+                      "Property": "Total Report Views"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "9ff0ec566202b5909001": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "a5d3f7b3547040636000": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "b8bc8812925b710ae9d0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "ba45052056443930a00c": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "bc7d9a2618cb992adb71": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "be8d7f2b0ad1a6b018d8": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "ded33f7ba04459d413b3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e141342060e115004605",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "object_type"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e9f4c025483aed37244e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "users_permissions"
+                            }
+                          },
+                          "Property": "object_id"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "users_permissions"
+                            }
+                          },
+                          "Property": "object_id"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "users_permissions"
+                        }
+                      },
+                      "Property": "object_type"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e3eff56da9b4c10b7918": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e61045430c869496c3a7": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e7d1898997100e398ca4": {
+            "singleVisual": {
+              "visualType": "pivotTable",
+              "objects": {},
+              "activeProjections": {
+                "Columns": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Facility"
+                        }
+                      },
+                      "Property": "Facility Name"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e9ac76af611423306600": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "f6bab5b48620be4cea26": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "322397a0606c0ed24a0c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "state"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "workspaces"
+                        }
+                      },
+                      "Property": "state"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "f7061b3e0b0d7b310812": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "569d5b66061d1803daa0": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "9dfc6a8e6927c2006094": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "4837d63e93a607d57e96": {
+            "isHidden": true
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

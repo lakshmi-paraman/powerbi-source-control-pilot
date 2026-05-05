@@ -1,0 +1,123 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "596d375210edba2d9803",
+  "position": {
+    "x": 2,
+    "y": 288,
+    "z": 34000,
+    "height": 426,
+    "width": 1262,
+    "tabOrder": 27000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "users_permissions"
+                    }
+                  },
+                  "Property": "object_id"
+                }
+              },
+              "queryRef": "users_permissions.object_id",
+              "nativeQueryRef": "object_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "users_permissions"
+                    }
+                  },
+                  "Property": "object_type"
+                }
+              },
+              "queryRef": "users_permissions.object_type",
+              "nativeQueryRef": "object_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "users_permissions"
+                    }
+                  },
+                  "Property": "principal_identifier"
+                }
+              },
+              "queryRef": "users_permissions.principal_identifier",
+              "nativeQueryRef": "principal_identifier"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "users_permissions"
+                    }
+                  },
+                  "Property": "principal_type"
+                }
+              },
+              "queryRef": "users_permissions.principal_type",
+              "nativeQueryRef": "principal_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "users_permissions"
+                    }
+                  },
+                  "Property": "workspace_id"
+                }
+              },
+              "queryRef": "users_permissions.workspace_id",
+              "nativeQueryRef": "workspace_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "users_permissions"
+                    }
+                  },
+                  "Property": "access_right"
+                }
+              },
+              "queryRef": "users_permissions.access_right",
+              "nativeQueryRef": "access_right"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "users_permissions"
+                    }
+                  },
+                  "Property": "dt"
+                }
+              },
+              "queryRef": "users_permissions.dt",
+              "nativeQueryRef": "dt"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

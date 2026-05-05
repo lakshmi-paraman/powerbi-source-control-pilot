@@ -1,0 +1,13 @@
+expression 'DirectQuery to AS - Governance_Dataset_V1.1' =
+		let
+		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/DIA-MIGRATION-ADMIN-AUDIT", "Governance_Dataset_V1.1"),
+		    Cubes = Table.Combine(Source[Data]),
+		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
+		in
+		    Cube
+	lineageTag: 4217456a-6346-4abf-af74-f1f83c47b8ec
+
+	annotation PBI_IncludeFutureArtifacts = True
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"3559c5e8-9f0b-4cff-aac5-e11f28f386d3"}},"objectType":"Table"}]
+
