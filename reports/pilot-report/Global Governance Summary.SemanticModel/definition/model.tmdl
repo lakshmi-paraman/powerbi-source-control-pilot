@@ -25,7 +25,6 @@ ref table MTable
 ref table pbi_report_usage
 ref table dax_intelligence
 ref table bpa_violations
-ref table tableau_asset_catalog
 ref table bobj_asset_inventory
 ref table tableau_metadata
 ref table bobj_metadata
