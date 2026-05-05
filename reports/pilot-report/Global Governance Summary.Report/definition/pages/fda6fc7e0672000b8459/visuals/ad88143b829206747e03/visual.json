@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Consolidated Summary",
+                    "value": "Summary",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI Light",
